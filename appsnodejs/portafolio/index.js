@@ -8,11 +8,13 @@ operaciones.dividir(100,5)*/
 const express = require('express')
 
 const server = express()
+
 server.use(express.static(__dirname + '/public'));
 server.set('view engine', 'ejs');
 server.set('views',__dirname + '/views');
 
 server.use('/Brandon', require('./routes/route')); 
+
 /*
 server.get('/informacion', (req, res)=>{
     /*res.send("hola brandon escudero")
@@ -35,6 +37,6 @@ server.get('/clientes', (req, res)=>{
 })*/
 
 server.listen(3002, ()=>{
-    console.log(`servidor 3002 encendido`)
+    console.log(`servidor http://localhost:3002/Brandon`)
 })
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/index', (req, res)=>{
+router.get('/', (req, res)=>{
     /*res.send("hola brandon escudero")
     console.log(__dirname)*/
     res.render('index')
